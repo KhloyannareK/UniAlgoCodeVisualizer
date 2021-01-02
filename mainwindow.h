@@ -26,7 +26,6 @@ public slots:
     void tool_recAction();
     void tool_compileAction();
 private:
-    void setUpMenuBar();
     void setUpToolBar();
     void setUpStatusBar();
     void setUpSpeedLine();

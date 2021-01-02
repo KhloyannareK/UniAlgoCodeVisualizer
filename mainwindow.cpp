@@ -12,6 +12,7 @@
 #include <QDockWidget>
 #include <QLayout>
 #include <QGroupBox>
+#include "menubar.h"
 
 namespace ACV {
 
@@ -21,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
     setMinimumSize(1000,800);
-    setUpMenuBar();
+    setMenuBar(new MenuBar(this));
     setUpToolBar();
     setUpStatusBar();
 
@@ -73,25 +74,6 @@ void MainWindow::tool_recAction()
 void MainWindow::tool_compileAction()
 {
     // TODO
-}
-
-void MainWindow::setUpMenuBar()
-{
-    // new QMenu class may be defined and used in this class as composition
-    QMenu* viewMenu = menuBar()->addMenu(tr("&View"));
-    viewMenu->addAction(tr("Theme"), this, &MainWindow::menu_handleViewAction); // save/for current/cancel
-    viewMenu->addAction(tr("Window Size"), this, &MainWindow::menu_handeWindowSizeAction); // save/cancel
-    viewMenu->addAction(tr("Color"), this, &MainWindow::menu_handleColorAction); // containers/code/tab
-
-    QMenu* statMenu = menuBar()->addMenu(tr("&Statistics"));
-    // add some action for to show vector: c1 \n matrix: c2 ... \n recordings: cn
-
-    QMenu* exampleMenu = menuBar()->addMenu(tr("&Examples"));
-    exampleMenu->addAction(tr("Code+Visualization"), this, &MainWindow::menu_handleCodeVisAcion);
-    exampleMenu->addAction(tr("Demo video"), this, &MainWindow::menu_handleDemoAction);
-
-    QMenu* settingsMenu = menuBar()->addMenu(tr("&Settings"));
-    settingsMenu->addAction(tr("&Recording directory"), this, &MainWindow::menu_recDirAction);
 }
 
 void MainWindow::setUpToolBar()
