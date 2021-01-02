@@ -1,0 +1,15 @@
+MAIN WINDOW COMPONENTS
+. Speed bar:                      to provide a way to customize the speed of updates
+. Processing bar:                 to show which percent of the algorithm is visualized
+. Stop/Play button:               to provide a way to stop algorithm visualization process
+. Code editor:                    to provide codding environment with run button in it
+. Debug (QTextEdit):              to show debugging steps of the code, the write should be disabled, should have horizontal and vertical scrolling.
+. Settings/Preferences:           to customize and save themes, seperate components theme, main window size, etc. (maybe QMenu + QRadioButton with its widget)
+. Record checkBox:                to record everything, main window, every visualization, debugger.
+. Statistics menu:                to save visualized algorithms count, count for each visualized container, etc. (to click on menu and an info window to be oppened)
+. View of visualizations:         to provide a way to the user to select how the vizualisations appear: stack view, stretching table view, android menu view. (menu with checkboxes)
+. Examples section:               to give codes and their vizualisation examples, also a video to show all functionalities. (menu button, when clicked to open the page)
+. Central Widget:                 to contain all visualizations. (QWidget)
+
+NOTE: See GUI view: eog mainWindowComponents.png
+ 
