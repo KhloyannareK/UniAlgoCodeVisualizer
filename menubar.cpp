@@ -1,7 +1,6 @@
 #include "menubar.h"
 
 namespace ACV {
-
 MenuBar::MenuBar(QWidget *parent)
     : QMenuBar(parent)
 {

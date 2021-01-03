@@ -11,11 +11,13 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    menubar.cpp
+    menubar.cpp \
+    toolbar.cpp
 
 HEADERS += \
     mainwindow.h \
-    menubar.h
+    menubar.h \
+    toolbar.h
 
 FORMS +=
 

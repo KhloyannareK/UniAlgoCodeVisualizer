@@ -16,21 +16,10 @@ public:
     static MainWindow* getMainWindow();
 
 public slots:
-    void menu_handleViewAction();
-    void menu_handeWindowSizeAction();
-    void menu_handleColorAction();
-    void menu_handleCodeVisAcion();
-    void menu_handleDemoAction();
-    void menu_recDirAction();
-
-    void tool_recAction();
-    void tool_compileAction();
+    //TODO
 private:
-    void setUpToolBar();
     void setUpStatusBar();
-    void setUpSpeedLine();
     void setUpProgressBar();
-    void setUpRunStopButton();
     void setUpWidgets();
 
 };
