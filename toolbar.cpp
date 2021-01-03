@@ -61,7 +61,7 @@ void SpeedWidget::updateLabel()
     emit speedChanged(m_speed);
 }
 
-inline unsigned SpeedWidget::speed() const
+unsigned SpeedWidget::speed() const
 {
     return m_speed;
 }
@@ -98,7 +98,7 @@ void ToolBar::addTools()
     addWidget(m_widgSpeed);
 }
 
-inline SpeedWidget* ToolBar::getSpeedPtr() const
+SpeedWidget* ToolBar::getSpeedPtr() const
 {
     return m_widgSpeed;
 }

@@ -4,6 +4,8 @@
 #include <QToolBar>
 class QLabel;
 class QPushButton;
+
+
 namespace ACV {
 
 class SpeedWidget : public QWidget
@@ -44,7 +46,6 @@ private:
     QAction* m_actStop{nullptr};
     QAction* m_actRecord{nullptr};
     SpeedWidget* m_widgSpeed{nullptr};
-
 };
 
 }

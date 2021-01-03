@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "menubar.h"
+#include "toolbar.h"
+#include "statusbar.h"
+
 
 /// Algo Code Visualizer
 namespace ACV {
@@ -18,10 +22,12 @@ public:
 public slots:
     //TODO
 private:
-    void setUpStatusBar();
-    void setUpProgressBar();
     void setUpWidgets();
 
+    // holding to avoid many get/set calls and dynamic casting
+    MenuBar* m_menuBar{nullptr};
+    ToolBar* m_toolBar{nullptr};
+    StatusBar* m_statusBar{nullptr};
 };
 
 }

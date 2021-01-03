@@ -12,11 +12,13 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     menubar.cpp \
+    statusbar.cpp \
     toolbar.cpp
 
 HEADERS += \
     mainwindow.h \
     menubar.h \
+    statusbar.h \
     toolbar.h
 
 FORMS +=

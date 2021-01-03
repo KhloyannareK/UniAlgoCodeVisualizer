@@ -12,21 +12,10 @@
 #include <QDockWidget>
 #include <QLayout>
 #include <QGroupBox>
-#include "menubar.h"
-#include "toolbar.h"
 
 namespace ACV {
 
 MainWindow* MainWindow::m_mainWindow{nullptr};
-
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-{
-    setMinimumSize(1000,800);
-    setMenuBar(new MenuBar(this));
-    addToolBar(new ToolBar{this});
-    setUpStatusBar();
-}
 
 MainWindow* MainWindow::getMainWindow()
 {
@@ -35,16 +24,19 @@ MainWindow* MainWindow::getMainWindow()
     return m_mainWindow;
 }
 
-void MainWindow::setUpProgressBar()
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
 {
-    QProgressBar* progressBar = new QProgressBar(statusBar());
-    progressBar->setValue(65);
-    progressBar->setTextVisible(true);
-    statusBar()->addWidget(progressBar,1);
-}
+    setMinimumSize(1000,800);
+    m_menuBar = new MenuBar{this};
+    setMenuBar(m_menuBar);
+    m_toolBar = new ToolBar{this};
+    addToolBar(m_toolBar);
+    m_statusBar = new StatusBar{this};
+    setStatusBar(m_statusBar);
+    m_statusBar->setProgressValue(65);
+    m_statusBar->showMessage("Hello");
 
-void MainWindow::setUpWidgets()
-{
     QTextEdit* central = new QTextEdit(this);
     central->setTextBackgroundColor(QPalette::Dark);
     setCentralWidget(central);
@@ -57,10 +49,6 @@ void MainWindow::setUpWidgets()
     layout->addWidget(widget,4);
 }
 
-void MainWindow::setUpStatusBar()
-{
-    setUpProgressBar();
-    setUpWidgets();
-}
+
 
 }
