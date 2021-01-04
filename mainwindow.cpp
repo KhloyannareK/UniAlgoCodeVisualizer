@@ -12,6 +12,9 @@
 #include <QDockWidget>
 #include <QLayout>
 #include <QGroupBox>
+#include <QGridLayout>
+#include "vvector.h"
+
 
 namespace ACV {
 
@@ -27,7 +30,7 @@ MainWindow* MainWindow::getMainWindow()
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
-    setMinimumSize(1000,800);
+    setMinimumSize(1100, 580);
     m_menuBar = new MenuBar{this};
     setMenuBar(m_menuBar);
     m_toolBar = new ToolBar{this};
@@ -37,16 +40,8 @@ MainWindow::MainWindow(QWidget *parent)
     m_statusBar->setProgressValue(65);
     m_statusBar->showMessage("Hello");
 
-    QTextEdit* central = new QTextEdit(this);
-    central->setTextBackgroundColor(QPalette::Dark);
-    setCentralWidget(central);
-    QHBoxLayout* layout = new QHBoxLayout(central);
-    layout->setDirection(QHBoxLayout::Direction::LeftToRight);
-    central->setLayout(layout);
-    QTextEdit* codeText = new QTextEdit("//Code here", central);
-    QTextEdit* widget = new QTextEdit("Visualizations here", central);
-    layout->addWidget(codeText, 2);
-    layout->addWidget(widget,4);
+    setCentralWidget(new QWidget{this});
+    centralWidget()->setLayout(new QGridLayout);
 }
 
 

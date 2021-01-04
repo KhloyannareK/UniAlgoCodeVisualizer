@@ -4,11 +4,11 @@ namespace ACV {
 MenuBar::MenuBar(QWidget *parent)
     : QMenuBar(parent)
 {
-    createMenusAndActions();
+    createAndAddMenusAndActions();
 }
 
 
-void MenuBar::createMenusAndActions()
+void MenuBar::createAndAddMenusAndActions()
 {
     // menu: View
     m_menuView = new QMenu(tr("&View"), this);

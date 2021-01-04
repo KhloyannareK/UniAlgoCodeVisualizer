@@ -11,7 +11,7 @@ class MenuBar : public QMenuBar
 public:
     MenuBar(QWidget* parent = nullptr);
 private:
-    void createMenusAndActions();
+    void createAndAddMenusAndActions();
 
     QMenu* m_menuView{nullptr};
     QMenu* m_menuExamples{nullptr};
