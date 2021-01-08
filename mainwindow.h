@@ -9,6 +9,7 @@
 
 /// Algo Code Visualizer
 namespace ACV {
+enum VectorView { histogram = 1, text, bottleText };
 
 class MainWindow : public QMainWindow
 {
@@ -19,6 +20,8 @@ class MainWindow : public QMainWindow
 public:
     static MainWindow* getMainWindow();
 
+    // options should be removed to another class Options
+    VectorView m_vectorView{histogram};
 public slots:
     //TODO
 private:
@@ -28,6 +31,7 @@ private:
     MenuBar* m_menuBar{nullptr};
     ToolBar* m_toolBar{nullptr};
     StatusBar* m_statusBar{nullptr};
+
 };
 
 }

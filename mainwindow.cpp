@@ -30,7 +30,7 @@ MainWindow* MainWindow::getMainWindow()
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
-    setMinimumSize(1100, 580);
+    setMinimumSize(1800, 1000);
     m_menuBar = new MenuBar{this};
     setMenuBar(m_menuBar);
     m_toolBar = new ToolBar{this};
